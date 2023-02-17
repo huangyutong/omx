@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="service_box">
-      <div class="inbox">
+      <div class="inbox t_l">
         <div class="service_item">
           <ul class="ulli">
             <li><a class="active" href="">EXHIBITION</a></li>
@@ -16,11 +16,11 @@
             below for those interested .Sections 1,10,32 and 1.10.33 from
             “deFinibus Bonoruum et Malorum”
           </p>
+          <div class="read_more">
+            <i class="fa-solid fa-plus"></i>
+            <a href="">READ MORE</a>
+          </div>
         </div>
-      </div>
-      <div class="read_more">
-        <i class="fa-solid fa-plus"></i>
-        <a href="">READ MORE</a>
       </div>
     </section>
   </div>
@@ -33,7 +33,7 @@ export default {
 <style scoped>
 .service_box {
   height: 100vh;
-  background-image: url('/images/img_index_banneer02.jpg');
+  background-image: url('/images/img_index_banner02.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -62,6 +62,7 @@ export default {
   text-align: left;
   z-index: 5;
 }
+
 .service_box .service_item a {
   font-size: 36px;
   color: #fff;
@@ -79,7 +80,8 @@ export default {
 }
 .service_box .service_content {
   text-align: left;
-  margin: 40px 0px;
+  margin: 150px 0px 40px;
+  max-width: 65%;
 }
 .service_box .read_more {
   padding: 10px 20px;
@@ -87,7 +89,9 @@ export default {
   border: 1px solid #fff;
   display: flex;
   align-items: center;
-  text-align: left;
+  max-width: 200px;
+  margin-top: 40px;
+  white-space: nowrap;
 }
 .service_box .read_more a {
   display: block;
@@ -99,5 +103,7 @@ export default {
   position: static;
   width: 20px;
   height: 20px;
+  padding: 5px;
+  margin-right: 20px;
 }
 </style>

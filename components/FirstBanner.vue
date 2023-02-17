@@ -1,24 +1,22 @@
 <template>
   <div class="banner_box">
-    <h1 class="banner_title">WE ARE OMX</h1>
+    <h1 class="banner_title animate__animated animate__fadeIn">WE ARE OMX</h1>
     <div class="banner_next_btn">
-      <div class="btn_circle">
-        <a href=""> <i class="fa-solid fa-arrow-down"></i></a>
+      <div id="circle" class="btn_circle">
+        <a href="#sec2" class="scroll">
+          <i class="fa-solid fa-arrow-down"></i
+        ></a>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {
-  mounted() {
-    window.jQuery('.btn_circle').click(function () {})
-  },
-}
+export default {}
 </script>
 <style scoped>
 .banner_box {
   height: 100vh;
-  background-image: url('/images/img_index_banneer.jpg');
+  background-image: url('/images/img_index_banner.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
@@ -28,6 +26,10 @@ export default {
   /* justify-content: space-around; */
   /* flex-direction: column; */
   position: relative;
+}
+.animate__animated.animate__fadeIn {
+  --animate-delay: 3s;
+  --animate-duration: 4s;
 }
 .banner_box:after {
   content: '';

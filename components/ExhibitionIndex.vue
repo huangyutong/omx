@@ -1,69 +1,91 @@
 <template>
-  <div>
-    <section class="index_item_box">
-      <div class="inbox">
-        <div class="home_item">
-          <ul class="ulli">
-            <li><a class="active" href="">EXHIBITION</a></li>
-            <li><a href="">INTERIOR DESIGN</a></li>
-            <li><a href="">INTERECTION</a></li>
-          </ul>
+  <section id="exhibition" class="index_item_box">
+    <div class="inbox index_item_box_content">
+      <Tab />
+      <div class="exhibition-content">
+        OMX is a powerful design service carrier. It takes creating unique
+        viewpoints and defining forward-looking exhibition curation trends as
+        its own responsibility.
+      </div>
+    </div>
+    <div class="swiper">
+      <div class="home_exhibition_slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="cover-fit" src="/images/img_index_banner.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="cover-fit"
+              src="/images/img_index_banner02.jpg"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="cover-fit"
+              src="/images/img_index_banner03.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
-      <div class="btn_circle">
-        <i class="fa-solid fa-arrow-down"></i>
-      </div>
-    </section>
-  </div>
+      <div class="home-application-slider-pagination"></div>
+    </div>
+  </section>
 </template>
 <script>
 export default {
-  mounted() {},
+  mounted() {
+    // eslint-disable-next-line no-new
+    new window.Swiper('.home_exhibition_slider', {
+      slidesPerView: 1,
+      loop: true,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 6000,
+      },
+      breakpoints: {
+        1220: {
+          slidesPerView: 1,
+        },
+      },
+    })
+  },
 }
 </script>
-<style scoped>
+<style>
+#exhibition {
+  position: relative;
+}
+
 .index_item_box {
   height: 100vh;
-  background-image: url('/images/img_index_banneer.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: center;
+  /* text-align: center;
   color: #f2f2f2;
   display: flex;
   align-items: center;
-  /* justify-content: space-around; */
   flex-direction: column;
-  position: relative;
+  position: relative; */
 }
-.index_item_box .inbox {
-  position: relative;
-}
-.index_item_box:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.2);
-}
-.index_item_box .home_item {
+
+#exhibition .inbox {
   position: absolute;
   top: 46px;
-  left: 0;
-  text-align: left;
-  z-index: 5;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
 }
-.index_item_box .home_item a {
-  font-size: 28px;
+#exhibition .exhibition-content {
+  margin-top: 170px;
   color: #fff;
-  opacity: 0.5;
+  width: 70%;
+  max-width: 750px;
 }
-.index_item_box .home_item a:hover,
-.index_item_box .home_item a.active {
-  opacity: 1;
+.index_item_box .swiper-wrapper {
+  height: 100vh;
 }
-.index_item_box .home_item a.active {
-  cursor: default;
+.index_item_box .swiper .swiper-slider {
+  height: auto;
 }
 </style>

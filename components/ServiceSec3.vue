@@ -1,99 +1,109 @@
 <template>
-  <div class="contact_index_box">
-    <div class="plus"><i class="fa-solid fa-plus"></i></div>
-    <div class="inbox layout">
-      <div class="sub_title">Contact us with <br />New business inquiry</div>
-
-      <div class="contact_bottom">
-        <div class="icon_box">
-          <a href="" class="icon fb">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="" class="icon yt">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-          <a href="" class="icon linkedin">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
+  <div>
+    <section class="service_box">
+      <div class="inbox t_l">
+        <div class="service_item">
+          <ul class="ulli">
+            <li><a href="">EXHIBITION</a></li>
+            <li><a href="">INTERIOR DESIGN</a></li>
+            <li><a class="active" href="">INTERECTION</a></li>
+          </ul>
         </div>
-        <hr />
-        <div class="contact_info_box">
-          <div class="addr">
-            5F,No.38,Sec.3,<br />Chongqing S.Rd.Zhongzheng Dist.,Taipei City
-            100056<br />
-            Taiwan(R.O.C.)
+        <div class="service_content">
+          <p>
+            we combined our service to improve the best for our customer.The
+            standard chunk of torem Ipsum used since the 1500s is reproduced
+            below for those interested .Sections 1,10,32 and 1.10.33 from
+            “deFinibus Bonoruum et Malorum”
+          </p>
+          <div class="read_more">
+            <i class="fa-solid fa-plus"></i>
+            <a href="">READ MORE</a>
           </div>
-          <div class="copyright">@2022 OMX All rights reserved</div>
         </div>
-        <hr />
       </div>
-    </div>
+    </section>
   </div>
 </template>
+<script>
+export default {
+  mounted() {},
+}
+</script>
 <style scoped>
-.contact_index_box {
-  color: #fff;
+.service_box {
   height: 100vh;
-  background: #6d7270;
-  padding: 150px 0;
-  position: relative;
-}
-.plus {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.contact_index_box .contact_index {
+  background-image: url('/images/img_index_banner02.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #f2f2f2;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   flex-direction: column;
-}
-.contact_index_box .layout .inbox {
   position: relative;
 }
-.contact_index_box .sub_title {
+.service_box .inbox {
+  position: relative;
+}
+.service_box :after {
+  content: '';
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 85%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
 }
-.contact_index_box .title {
-  font-size: 3em;
+.service_box .service_item {
+  /* position: absolute; */
+  top: 46px;
+  left: 0;
+  text-align: left;
+  z-index: 5;
 }
-.contact_index_box .icon_box {
+
+.service_box .service_item a {
+  font-size: 36px;
+  color: #fff;
+  opacity: 0.5;
+}
+.service_box .service_item a:hover,
+.service_box .service_item a.active {
+  opacity: 1;
+}
+.service_box .service_item a.active {
+  cursor: default;
+}
+.service_box li {
+  line-height: 40px;
+}
+.service_box .service_content {
+  text-align: left;
+  margin: 150px 0px 40px;
+  max-width: 65%;
+}
+.service_box .read_more {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid #fff;
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
+  align-items: center;
+  max-width: 200px;
+  margin-top: 40px;
+  white-space: nowrap;
 }
-.contact_index_box .icon_box a {
+.service_box .read_more a {
+  display: block;
   color: #fff;
 }
-.contact_index_box .icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.service_box .read_more .svg-inline--fa {
   border: 1px solid #fff;
-  margin-left: 10px;
-  position: relative;
-  transition: 0.4s;
-}
-.contact_index_box .icon:hover {
-  opacity: 0.5;
-  border: 3px solid #fff;
-}
-.contact_index_box .icon .svg-inline--fa {
-  font-size: 10px;
-}
-.contact_index_box .contact_bottom {
-  position: absolute;
-  width: 85%;
-  bottom: 20px;
-}
-.contact_index_box .contact_info_box {
-  font-size: 14px;
-  margin: 20px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-radius: 50%;
+  position: static;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  margin-right: 20px;
 }
 </style>

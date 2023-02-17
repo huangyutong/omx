@@ -1,5 +1,5 @@
 <template>
-  <div class="about_box">
+  <div class="about_box" id="sec2">
     <h1 class="about_title">
       AT OMX, <br />
       WE BRING PEOPLE <br />TOGETHER.
@@ -7,12 +7,17 @@
     <div class="banner_content">
       Whether at a concert,a flagship store or across an urban square,
     </div>
-    <div class="about_us_btn"><a href="">About Us</a></div>
-    <div class="btn_circle">
-      <i class="fa-solid fa-arrow-down"></i>
+   
+    <div id="circle" class="btn_circle">
+      <a href="#exhibition" class="scroll">
+        <i class="fa-solid fa-arrow-down"></i>
+      </a>
     </div>
   </div>
 </template>
+<script>
+export default {}
+</script>
 <style scoped>
 .about_box {
   height: 100vh;
@@ -27,11 +32,11 @@
   position: relative;
 }
 
-.btn_circle {
+.about_box .btn_circle {
   border: 2px solid #000;
 }
 .banner_content,
-.btn_circle,
+.about_box .btn_circle,
 .about_box .about_us_btn,
 .about_title {
   z-index: 5;
@@ -41,6 +46,7 @@
   font-weight: 500;
   z-index: 5;
   font-size: 3em;
+  line-height: 50px;
 }
 .about_box .about_us_btn a {
   padding: 10px 25px;

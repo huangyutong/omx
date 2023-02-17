@@ -19,10 +19,7 @@ export default {
         rel: 'stylesheet',
         href: 'https://necolas.github.io/normalize.css/8.0.1/normalize.css',
       },
-      {
-        rel: 'stylesheet',
-        href: 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css',
-      },
+
       {
         rel: 'stylesheet',
         href: 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css',
@@ -33,11 +30,15 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css',
+        href: 'https://unpkg.com/swiper@8/swiper-bundle.min.css',
       },
       {
         rel: 'stylesheet',
         href: 'https://unpkg.com/aos@next/dist/aos.css',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
       },
     ],
     script: [
@@ -49,16 +50,17 @@ export default {
         src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js',
         type: 'text/javascript',
       },
+
       {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js',
-        type: 'text/javascript',
-      },
-      {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js',
+        src: 'https://unpkg.com/swiper@8/swiper-bundle.min.js',
         type: 'text/javascript',
       },
       {
         src: 'https://unpkg.com/aos@next/dist/aos.js',
+        type: 'text/javascript',
+      },
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js',
         type: 'text/javascript',
       },
     ],
