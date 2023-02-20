@@ -4,7 +4,7 @@
     <PortfolioBanner />
     <div class="portfolio_list inbox">
       <div class="project">
-        <a href="" class="project_link">
+        <a href="/portfolio_page/detail" class="project_link">
           <img src="/images/img_portfolio_list.jpg" alt="" class="cover-fit" />
         </a>
         <div class="project_info">
